@@ -1,0 +1,157 @@
+/* CSS Reset & Document Styling */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html,
+body {
+  place-content: center;
+  font-size: 16px;
+  background-color: #c5e4e7;
+}
+
+/* Shared Styling */
+
+html,
+.tip-option,
+.input,
+.reset-btn {
+    font-family: "Space Mono", monospace;
+    border: none;
+}
+
+header,
+.calc-input,
+.results > div{
+    display: flex;
+    align-items: center;
+}
+
+/* Styles */
+
+header {
+  justify-content: center;
+}
+
+.logo {
+    margin: 50px
+}
+
+.main-container{
+  background-color: white;
+  display: grid;
+  grid-template: repeat(2, 100%) / 100%;
+  justify-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  min-width: 375px;
+}
+
+.titles{
+  font-weight: 700;
+  font-size: 16px;
+  color: #5e7a7d;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-left: 7.5px;
+}
+
+.input{
+  padding-right: 20px;  
+  width: 250px;
+  background-color: transparent;
+  color:#00494d;
+  text-align: right;
+  font-size: 24px;
+  outline: none;
+}
+
+.input-img {
+  margin-left: 20px;
+}
+
+.calc-input {
+  justify-content: space-between;
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #f4fafa;
+  margin: 0 7.5px 35px 7.5px;
+}
+
+.tip-grid{
+  display: grid;
+  grid-template: repeat(3, auto) / repeat(2, auto);
+  margin-bottom: 25px;
+}
+
+.tip-option {
+  margin: 7.5px;
+  height: 45px;
+  width: 140px;
+  border-radius: 8px;
+  font-size: 22px;
+}
+
+.percent{
+  color: white;
+  background-color: #00494d;
+}
+
+.custom{
+    color: #5e7a7d;
+    background-color: #f4fafa;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  background-color:#00494d;
+  border-radius: 12px;
+  width: 95%;
+  padding: 20px;
+  margin-bottom:30px;
+  height: 250px;
+}
+
+.results > div{   
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.res-title{
+  color: white;
+  font-size: 14px;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.per-person {
+  color:#7f9c9f;
+  font-size: 12px;
+}
+
+.price{
+    font-size: 28px;
+    color:#26c0ab;
+    margin: 10px 0 0 0;
+}
+
+.reset-btn{
+    margin: 35px 10px;
+    padding: 15px;
+    background-color: #26c0ab;
+    color:#00494d;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (min-width: 1200px){
+
+}

@@ -3,42 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <title>Tip Calculator App</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <img class="logo" src="./images/logo.svg" alt="splitter logo">
+  </header>
+  <main class="main-container">
+    <section class="calculator">
 
-  Bill
+      <section class="bill-section">
+        <p class="titles">Bill</p>
+        <div class="calc-input">
+          <img class="input-img" src="./images/icon-dollar.svg" alt="">
+          <input class="input" type="text" placeholder="0" maxlength="15">
+        </div>
+      </section>
+      <section class="tip-section">
+        <p class="titles">Select Tip %</p>
+        <div class="tip-grid">
+          <button class="tip-option percent">5%</button>
+          <button class="tip-option percent">10%</button>
+          <button class="tip-option percent">15%</button>
+          <button class="tip-option percent">25%</button>
+          <button class="tip-option percent">50%</button>
+          <button class="tip-option custom">Custom</button>
+        </div>
+      </section>
+      <section class="num-people">
+        <p class="titles">Number of People</p> <p class="show-cbz"></p>
+        <div class="calc-input">
+          <img class="input-img" src="./images/icon-person.svg" alt="">
+          <input class="input" type="text" placeholder="0">
+        </div>
+      </section>
+    </section>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <section class="results">
+        <div>
+          <div>
+            <h4 class="titles res-title">Tip Amount</h4>
+            <p class="per-person">/ person</p>
+          </div>
+          <p class="price">$<span class="result">0.00</span></p>
+        </div>
+        <div>
+          <div>
+            <h4 class="titles res-title">Total</h4>
+            <p class="per-person">/ person</p>
+          </div>
+          <p class="price">$<span class="result">0.00</span></p>
+        </div>
+        <button class="reset-btn">RESET</button>
+      </section>
+  </main>
+  <script src="./script.js"></script>
 </body>
-</html>
+</html> 
