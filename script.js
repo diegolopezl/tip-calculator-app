@@ -36,7 +36,7 @@ function updateTotal(){
     let totalTip = ((billAmt * tipAmt) / 100);
     let totalBill = (billAmt + totalTip);
 
-    if(!isNaN(bill.value) && !isNaN(people.value) && !isNaN(tipAmt) && bill.value > 0 && people.value > 1 && tipAmt >= 0){
+    if(!isNaN(bill.value) && !isNaN(people.value) && !isNaN(tipAmt) && bill.value > 0 && people.value >= 1 && tipAmt >= 0){
         tipTotal.innerHTML = (totalTip/peopleAmt).toFixed(2);
         total.innerHTML = (totalBill/peopleAmt).toFixed(2);
     }
@@ -49,7 +49,7 @@ function removePressed(){
 }
 
 function enableResetButton(){
-    if (bill.value.length> 0 && people.value.length> 0 &&parseFloat(people.value) !== 0){
+    if (bill.value.length> 0 && people.value.length> 0 && parseFloat(people.value) !== 0){
         reset.disabled = false;
     } else {
         reset.disabled = true;
