@@ -36,7 +36,7 @@ function updateTotal(){
     let totalTip = ((billAmt * tipAmt) / 100);
     let totalBill = (billAmt + totalTip);
 
-    if(!isNaN(bill.value) && !isNaN(people.value) && !isNaN(tipAmt) && bill.value > 0 && people.value >= 1 && tipAmt >= 0){
+    if(!isNaN(bill.value) && !isNaN(people.value) && !isNaN(tipAmt) && bill.value > 0 && people.value > 0 && tipAmt >= 0){
         tipTotal.innerHTML = (totalTip/peopleAmt).toFixed(2);
         total.innerHTML = (totalBill/peopleAmt).toFixed(2);
     }
