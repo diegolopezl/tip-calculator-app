@@ -229,6 +229,10 @@ header {
 }
 
 @media (min-width: 1200px){
+
+  .logo{
+    margin: 75px 0 50px 0;
+  }
   .main-container{
     grid-template: 1fr / 0.5fr 0.5fr;
     border-radius: 20px;
