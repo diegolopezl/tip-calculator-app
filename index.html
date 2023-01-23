@@ -18,8 +18,8 @@
     <section class="calculator">
 
       <section class="bill-section">
-        <p class="titles">Bill</p>
-        <div class="calc-input">
+        <p class="titles bill-title">Bill</p>
+        <div class="calc-input selected">
           <img class="input-img" src="./images/icon-dollar.svg" alt="">
           <input class="input bill num-input" type="text" placeholder="0" maxlength="15">
         </div>
@@ -32,32 +32,37 @@
           <button class="tip-option percent">15%</button>
           <button class="tip-option percent">25%</button>
           <button class="tip-option percent">50%</button>
-          <input class="tip-option custom num-input num" type="text" placeholder="Custom" maxlength="3">
+          <input class="tip-option selected custom num-input" type="text" placeholder="Custom" maxlength="3">
         </div>
       </section>
       <section class="num-people">
-        <p class="titles">Number of People</p> <p class="show-cbz"></p>
-        <div class="calc-input">
+        <div class="number-of-people">
+          <p class="titles">Number of People</p>
+          <p class="cant-be-zero titles">Can't be zero</p>
+        </div>
+        <div class="calc-input people-border">
           <img class="input-img" src="./images/icon-person.svg" alt="">
-          <input class="input people num-input num" type="text" placeholder="0" maxlength="3">
+          <input class="input people num-input" type="text" placeholder="0" maxlength="3">
         </div>
       </section>
     </section>
 
     <section class="results">
         <div>
-          <div>
-            <h4 class="titles res-title">Tip Amount</h4>
-            <p class="per-person">/ person</p>
+          <div class="price-box">
+            <div>
+              <h4 class="titles res-title">Tip Amount</h4>
+              <p class="per-person">/ person</p>
+            </div>
+            <p class="price">$<span class="tip-total result">0.00</span></p>
           </div>
-          <p class="price">$<span class="tip-total result">0.00</span></p>
-        </div>
-        <div>
-          <div>
-            <h4 class="titles res-title">Total</h4>
-            <p class="per-person">/ person</p>
+          <div class="price-box">
+            <div>
+              <h4 class="titles res-title">Total</h4>
+              <p class="per-person">/ person</p>
+            </div>
+            <p class="price">$<span class="total result">0.00</span></p>
           </div>
-          <p class="price">$<span class="total result">0.00</span></p>
         </div>
         <button class="reset-btn">RESET</button>
       </section>

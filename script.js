@@ -7,8 +7,20 @@ const total = document.querySelector(".total");
 const people = document.querySelector(".people");
 const reset = document.querySelector(".reset-btn");
 const percent = document.querySelectorAll(".percent");
+const cbzText = document.querySelector(".cant-be-zero");
+const pplBorder = document.querySelector(".people-border");
+const inputs = document.querySelectorAll(".num-input");
+const inputBox = document.querySelectorAll(".selected");
+
+const inputArray = Array.from(inputs);
+const inputBoxArray = Array.from(inputBox);
 const percentArray = Array.from(percent);
 let tipAmt = 0;
+
+
+//Enable/Disable Reset Button
+reset.disabled = true;
+setInterval(enableResetButton, 100);
 
 // Functions
 function hundredMax(e){
@@ -36,6 +48,14 @@ function removePressed(){
     });
 }
 
+function enableResetButton(){
+    if (bill.value.length> 0 && people.value.length> 0 &&parseFloat(people.value) !== 0){
+        reset.disabled = false;
+    } else {
+        reset.disabled = true;
+    }
+}
+
 function resetAll(){
     bill.value = "";
     people.value = "";
@@ -46,17 +66,29 @@ function resetAll(){
 
 // Event Listeners
 
-bill.addEventListener("blur", function(event) {
+bill.addEventListener("input", function(event){
     this.value = this.value.replace(/[^0-9.]/g, "");
+});
+
+bill.addEventListener("blur", function(event) {
+    
     let decimal = this.value.split(".")[1];
-    if(!decimal){
-        this.value = parseFloat(this.value).toFixed(2);
-    }else if(decimal.length>2){
-        this.value = parseFloat(this.value).toFixed(2);
-    }
+    
+    if(this.value.trim() === ""){this.value = "";}
+    else if (!decimal){this.value = parseFloat(this.value).toFixed(2);}
+    else if(decimal.length>2){ this.value = parseFloat(this.value).toFixed(2);}
 
     console.log(this.value);
     updateTotal();
+});
+
+inputArray.forEach(function(e, index){
+    e.addEventListener("click", function(){
+        inputBoxArray.forEach(function(inpt){
+            inpt.classList.remove("input-selected");
+        });
+        inputBoxArray[index].classList.toggle("input-selected");
+    });
 });
 
 percentArray.forEach(function(e, index){
@@ -100,6 +132,14 @@ custom.addEventListener("input", function(event) {
 people.addEventListener("input", function(event) {
     hundredMax(this);
     updateTotal();
+    if(parseFloat(this.value) === 0){   
+        pplBorder.classList.add("border-cbz");
+        cbzText.classList.add("show-cbz");
+    } else{
+        pplBorder.classList.remove("border-cbz");
+        cbzText.classList.remove("show-cbz");
+    }
+
 });
 
 reset.addEventListener("click", function(event){
