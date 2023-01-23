@@ -30,6 +30,11 @@ header,
     align-items: center;
 }
 
+.num-input{
+color:#00494d;
+  background-color: #f4fafa;
+}
+
 /* Styles */
 
 header {
@@ -43,7 +48,7 @@ header {
 .main-container{
   background-color: white;
   display: grid;
-  grid-template: repeat(2, 100%) / 100%;
+  grid-template: repeat(2, 0.5fr) / 1fr;
   justify-items: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -64,7 +69,6 @@ header {
   padding-right: 20px;  
   width: 250px;
   background-color: transparent;
-  color:#00494d;
   text-align: right;
   font-size: 24px;
   outline: none;
@@ -103,8 +107,11 @@ header {
 }
 
 .custom{
-    color: #5e7a7d;
-    background-color: #f4fafa;
+    text-align: center;
+}
+
+.custom:focus{
+  outline: none;
 }
 
 .results{
@@ -150,6 +157,28 @@ header {
     border-radius: 8px;
     font-size: 16px;
     font-weight: 700;
+}
+
+.input:hover,
+.reset-btn:hover,
+.tip-option:hover{
+  cursor:pointer
+}
+
+.tip-option:hover,
+.reset-btn:hover{
+  transform: scale(1.025);
+}
+
+.pressed{
+  background-color: #26c0ab;
+  color:#015e63;
+  transform: scale(0.95);
+}
+
+.percent:hover,
+.reset-btn:hover{
+  filter: brightness(93%);
 }
 
 @media (min-width: 1200px){

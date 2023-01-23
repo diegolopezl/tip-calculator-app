@@ -21,7 +21,7 @@
         <p class="titles">Bill</p>
         <div class="calc-input">
           <img class="input-img" src="./images/icon-dollar.svg" alt="">
-          <input class="input" type="text" placeholder="0" maxlength="15">
+          <input class="input bill num-input" type="text" placeholder="0" maxlength="15">
         </div>
       </section>
       <section class="tip-section">
@@ -32,14 +32,14 @@
           <button class="tip-option percent">15%</button>
           <button class="tip-option percent">25%</button>
           <button class="tip-option percent">50%</button>
-          <button class="tip-option custom">Custom</button>
+          <input class="tip-option custom num-input num" type="text" placeholder="Custom" maxlength="3">
         </div>
       </section>
       <section class="num-people">
         <p class="titles">Number of People</p> <p class="show-cbz"></p>
         <div class="calc-input">
           <img class="input-img" src="./images/icon-person.svg" alt="">
-          <input class="input" type="text" placeholder="0">
+          <input class="input people num-input num" type="text" placeholder="0" maxlength="3">
         </div>
       </section>
     </section>
@@ -50,14 +50,14 @@
             <h4 class="titles res-title">Tip Amount</h4>
             <p class="per-person">/ person</p>
           </div>
-          <p class="price">$<span class="result">0.00</span></p>
+          <p class="price">$<span class="tip-total result">0.00</span></p>
         </div>
         <div>
           <div>
             <h4 class="titles res-title">Total</h4>
             <p class="per-person">/ person</p>
           </div>
-          <p class="price">$<span class="result">0.00</span></p>
+          <p class="price">$<span class="total result">0.00</span></p>
         </div>
         <button class="reset-btn">RESET</button>
       </section>

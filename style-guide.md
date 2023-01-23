@@ -11,16 +11,16 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Strong cyan: Reset btn / selected tip
+- Strong cyan: hsl(172, 67%, 45%)
 
 ### Neutral
 
-- Very dark cyan: #00494d non selected tip / results
+- Very dark cyan: #00494d Tips / results bg
 - Dark grayish cyan: #5e7a7d Titles
 - Grayish cyan: #7f9c9f Icons
 - Light grayish cyan: #c5e4e7 Background
 - Very light grayish cyan: #f4fafa text input bg
-- White: white 🤙
+- White: hsl(0, 0%, 100%)
 
 ## Typography
 
